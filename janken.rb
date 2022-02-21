@@ -27,13 +27,14 @@ def janken
         return false
       else
         puts "やり直し"
-        return false
+        return true
       end
     end
     next_game = true
 
     while next_game
-      next_game = win_my_hoi_turn
+      next_game = janken
+      
     end
     return false
 
@@ -59,12 +60,13 @@ def janken
         return false
       else
         puts "やり直し"
-        return false
+        return true
       end
     end
     next_game = true
     while next_game
-      next_game = lose_cpu_hoi_turn
+      next_game = janken
+      
     end
     return false
   end
